@@ -27,6 +27,7 @@ public class TestBase {
         capabilities.setCapability(MobileCapabilityType.BROWSER_NAME, "Chrome");
         capabilities.setCapability("appPackage", "com.android.chrome");
         capabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, "5000");
+        capabilities.setCapability("avd", deviceName);
 
         // Initialize the driver.
         App.driver = new AndroidDriver<MobileElement>(url, capabilities);
