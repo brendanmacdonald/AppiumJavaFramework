@@ -1,7 +1,7 @@
 # Appium Java Framework
 
-Sample framework for running tests on Android emulators.
-All of the tests run in Chrome and perform basic steps on the website.
+Sample framework for running tests on Android emulators and real Android devices.
+All of the tests run in the Chrome browser and perform basic steps on the website.
 
 ## Requirements
 1. Install the Android SDK.
