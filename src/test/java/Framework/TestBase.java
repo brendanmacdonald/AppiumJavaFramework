@@ -13,12 +13,12 @@ import java.util.concurrent.TimeUnit;
 
 public class TestBase {
 
-    @BeforeSuite
-    @Parameters({"deviceName", "platform"})
-    public void setUpAppium(String deviceName, String platform) throws MalformedURLException {
+    @BeforeMethod
+    @Parameters({"appiumServerURL", "appiumServerPort", "deviceName", "platform"})
+    public void setUpAppium(String appiumServerURL, String appiumServerPort, String deviceName, String platform) throws MalformedURLException {
 
         // Define the URL for the Appium server.
-        final String URL_STRING = "http://127.0.0.1:4723/wd/hub";
+        final String URL_STRING = appiumServerURL + ":" + appiumServerPort + "/wd/hub";
         URL url = new URL(URL_STRING);
 
         DesiredCapabilities capabilities = new DesiredCapabilities();

@@ -1,18 +1,33 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 <suite name="Device Tests">
-    <test name="Login Tests">
+    <parameter name="appiumServerURL" value="http://127.0.0.1" />
+    <parameter name="appiumServerPort" value="4723" />
+
+    <test name="Nexus_5X_API_26 Tests">
+        <parameter name="deviceName" value="Nexus_5X_API_26" />
+        <parameter name="platform" value="Android" />
+        <classes>
+            <class name="Tests.GoogleSearchPageTest" />
+        </classes>
+    </test>
+
+    <test name="Nexus_6_API_26 Tests">
+        <parameter name="deviceName" value="Nexus_6_API_26" />
+        <parameter name="platform" value="Android" />
         <classes>
             <class name="Tests.GoogleSearchPageTest" />
         </classes>
     </test>
 
     <test name="Login Tests 2">
-        <parameter name="username" value="someone" />
+        <parameter name="username" value="someone@gmail.com" />
         <parameter name="password" value="Password1" />
+        <parameter name="deviceName" value="Nexus_6_API_26" />
+        <parameter name="platform" value="Android" />
         <classes>
             <class name="Tests.GoogleSignInPageTest" />
         </classes>
     </test>
-</suite>
 
+</suite>
