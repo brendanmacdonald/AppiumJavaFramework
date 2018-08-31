@@ -17,6 +17,7 @@ public class GoogleSearchPage {
 
     // Page elements.
     public AppControl signInButton = new AppControl(By.linkText("Sign in"));
+    public AppControl searchText = new AppControl(By.name("q"));
     public AppControl imageLink = new AppControl(By.linkText("IMAGES"));
 
 

@@ -25,9 +25,13 @@ appium --chromedriver-executable <path to you local installation of chromedriver
 ```
 mvn test
 ```
-3. To run on a physical device, execute the following to get a connected device name, and substitute it in point 2 above:
+3. To run on a physical device (default settings in this repository), execute the following to get a connected device name, and substitute it in point 2 above:
 ```
 adb devices
+```
+and comment out the line
+```
+capabilities.setCapability("avd", deviceName);
 ```
 
 

@@ -30,7 +30,7 @@ public class GoogleSignInPageTest extends TestBase {
         // Assert Email or Phone field is displayed.
         Assert.assertTrue(App.GoogleSignInPage().emailOrPhoneEdit.isDisplayed());
 
-        // Fill in Email or Phone field and press NEXT.
+        // Fill in Email field and press NEXT.
         App.GoogleSignInPage().emailOrPhoneEdit.sendKeys(username);
         App.GoogleSignInPage().nextBtn.click();
     }

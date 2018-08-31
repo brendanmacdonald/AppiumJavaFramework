@@ -3,31 +3,15 @@
 <suite name="Device Tests">
     <parameter name="appiumServerURL" value="http://127.0.0.1" />
     <parameter name="appiumServerPort" value="4723" />
+    <parameter name="username" value="TestUser001" />
+    <parameter name="password" value="Password001" />
 
-    <test name="Nexus_5X_API_26 Tests">
-        <parameter name="deviceName" value="Nexus_5X_API_26" />
+    <test name="Physical S6 device Tests">
+        <parameter name="deviceName" value="01157df1d04cb80c" />
         <parameter name="platform" value="Android" />
         <classes>
             <class name="Tests.GoogleSearchPageTest" />
-        </classes>
-    </test>
-
-    <test name="Nexus_6_API_26 Tests">
-        <parameter name="deviceName" value="Nexus_6_API_26" />
-        <parameter name="platform" value="Android" />
-        <classes>
-            <class name="Tests.GoogleSearchPageTest" />
-        </classes>
-    </test>
-
-    <test name="Login Tests 2">
-        <parameter name="username" value="someone@gmail.com" />
-        <parameter name="password" value="Password1" />
-        <parameter name="deviceName" value="Nexus_6_API_26" />
-        <parameter name="platform" value="Android" />
-        <classes>
             <class name="Tests.GoogleSignInPageTest" />
         </classes>
     </test>
-
 </suite>
